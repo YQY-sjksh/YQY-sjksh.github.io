@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ECharts</title>
+    <script src="js/echarts.min.js"></script>
+  </head>
+  <body>
+    <div id="hz" style="width: 800px;height:600px;"></div>
+    <script type="text/javascript">
+      var yqyChart = echarts.init(document.getElementById('hz'));
+
+      // 指定图表的配置项和数据
+      var option = {
+        title: {
+          text: '不同批次公布的不同年画申遗数量'
+        },
+        tooltip: {},
+        legend: {
+          data: ['销量']
+        },
+        xAxis: {
+          type: 'category',
+          data: ['第一批(2006)', '第二批(2008)', '第三批(2011)']
+         },
+         yAxis: {
+          type: 'value'
+        },
+        series: [
+        {
+         data: [12, 5, 1],
+          type: 'line'
+        }
+        ]
+      };
+      yqyChart.setOption(option);
+    </script>
+  </body>
+</html>
